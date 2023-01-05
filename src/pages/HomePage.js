@@ -1,5 +1,6 @@
 import React from 'react';
 import ContactList from '../components/ContactList';
+import SearchBar from '../components/SearchBar';
 import { deleteContact, getContacts } from '../utils/data';
 
 class HomePage extends React.Component {
