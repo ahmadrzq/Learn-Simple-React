@@ -37,6 +37,7 @@ class HomePage extends React.Component {
     render() {
         return (
             <section>
+                <SearchBar keyword={this.state.keyword} keywordChange={this.onKeywordChangeHandler} />
                 <h2>Daftar Kontak</h2>
                 <ContactList contacts={this.state.contacts} onDelete={this.onDeleteHandler} />
             </section>
