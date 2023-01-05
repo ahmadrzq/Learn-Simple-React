@@ -7,10 +7,12 @@ class HomePage extends React.Component {
         super(props);
 
         this.state = {
-            contacts: getContacts()
+            contacts: getContacts(),
+            keyword: '',
         }
 
         this.onDeleteHandler = this.onDeleteHandler.bind(this);
+        this.onKeywordChangeHandler = this.onKeywordChangeHandler.bind(this);
     }
 
     onDeleteHandler(id) {
@@ -20,6 +22,14 @@ class HomePage extends React.Component {
         this.setState(() => {
             return {
                 contacts: getContacts(),
+            }
+        });
+    }
+
+    onKeywordChangeHandler(keyword) {
+        this.setState(() => {
+            return {
+                keyword,
             }
         });
     }
